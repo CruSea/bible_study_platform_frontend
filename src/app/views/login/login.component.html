@@ -1,0 +1,32 @@
+<div class="app flex-row align-items-center">
+  <div class="container">
+    <div class="row justify-content-center">
+
+        <img src="assets/img/logo.png" class="img-avatar" alt="#"/><br>
+      
+      <div class="col-md-6">
+        <div class="card mx-5">
+          <div class="card-body p-4">
+              
+             <h2>Login</h2>
+            <form (ngSubmit)="onSignin(f)" #f="ngForm">
+              <div class="input-group mb-3">
+                <span class="input-group-addon">@</span>
+                <input type="text" ngModel class="form-control" placeholder="Email" name="email">
+              </div>
+              <div class="input-group mb-3">
+                <span class="input-group-addon"><i class="icon-lock"></i></span>
+                <input type="password" ngModel class="form-control" placeholder="Password" name="password">
+              </div>
+              <button type="submit" [disabled]="!f.valid" class="btn btn-block btn-success"> Login</button>
+            </form> <br>
+            <a href="forgotpassword" class="btn btn-small btn">Forgot password</a><br>
+            <p class="btn btn-small btn">yet a member?</p>
+            <br>
+          <a [routerLink]="['/register']">  <button    class="btn btn-block btn-secondary">Create an account</button></a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
