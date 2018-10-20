@@ -63,6 +63,11 @@ import { LoginRoutingModule } from 'app/views/login/login-routing.module';
 import { HttpService } from 'app/http.service';
 import { AuthService } from 'app/auth.service';
 import { RegisterModule } from 'app/views/register/register.module';
+import { BibleStudyComponent } from './views/bible_study/bible-study.component';
+import { CategoryComponent } from './views/category/category.component';
+import { UserComponent } from './views/user/user.component';
+import { SmsLogsComponent } from './views/sms-logs/sms-logs.component';
+
 
 @NgModule({
   imports: [
@@ -73,13 +78,16 @@ import { RegisterModule } from 'app/views/register/register.module';
     ChartsModule,
     LoginModule,
     RegisterModule,
-    LoginRoutingModule
+    LoginRoutingModule,
+   
   ],
   declarations: [
     AppComponent,
     ...APP_CONTAINERS,
     ...APP_COMPONENTS,
-    ...APP_DIRECTIVES
+    ...APP_DIRECTIVES,
+  
+   
   ],
   providers: [{
     provide: LocationStrategy,

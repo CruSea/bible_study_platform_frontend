@@ -34,11 +34,6 @@ export const routes: Routes = [
     ]
   },
   {
-    path: 'dashboard',
-    redirectTo: 'dashboard',
-    pathMatch: 'full',
-  },
-  {
     path: '',
     component: FullLayout,
     data: {
@@ -49,9 +44,33 @@ export const routes: Routes = [
         path: 'dashboard',
         loadChildren: './views/dashboard/dashboard.module#DashboardModule'
       },
-
+      {
+        path: 'sms-logs',
+        loadChildren: './views/sms-logs/sms-logs.module#SmsLogsModule'
+      },
+      {
+        path: 'bs',
+        loadChildren: './views/bible_study/bible_study.module#BibleStudyModule'
+      },
+      {
+        path: 'year',
+        loadChildren: './views/year/year.module#YearModule'
+      },
+      {
+        path: 'profile',
+        loadChildren: './views/user/user.module#UserModule'
+      },
+      {
+        path: 'category',
+        loadChildren: './views/category/category.module#CategoryModule'
+      },
+      {
+        path: 'user',
+        loadChildren: './views/user/user.module#UserModule'
+      },
+      
     ]
-  } 
+    },
 ];
 
 @NgModule({
