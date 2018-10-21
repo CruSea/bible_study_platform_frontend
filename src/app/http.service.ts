@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 
 @Injectable()
 export class HttpService {
-  private  rootURl = 'http://localhost:8000/';
+  private  rootURl = 'http://localhost:8000/api/';
 
   constructor(private httpRequest: HttpClient) { }
 

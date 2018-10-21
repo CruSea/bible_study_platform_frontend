@@ -15,13 +15,11 @@ export class BibleStudy {
     public tags: number;
     public created_at: number;
     public updated_at: number;
-    
-    // 
-    public cover_image: string;
+
     constructor() {
       this.id = null;
       this.bs_id= '';
-      this.term = '';
+      this.term = '1';
       this.category_id = null;
       this.year_id = null;
         this.bs_name = '';
@@ -36,7 +34,5 @@ export class BibleStudy {
         this.updated_at = null;
 
 
-    
-  
     }
   }

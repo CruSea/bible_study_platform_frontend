@@ -9,68 +9,68 @@
   <div class="card-body">
       <div class="form-group">
           <label for="city">bs_id</label>
-          <input [(ngModel)]="biblestudy.bs_id" type="text" ngModel class="form-control" id="bs_id" placeholder="">
+          <input [(ngModel)]="biblestudy.bs_id" name="bs_id" type="text" ngModel class="form-control" id="bs_id" placeholder="">
         </div>
     <div class="form-group">
-      
+
       <label for="company">title</label>
-      <input type="text"[(ngModel)]="biblestudy.title" class="form-control" id="title" placeholder="Enter your company name">
+      <input type="text"[(ngModel)]="biblestudy.title" name="title" class="form-control" id="title" placeholder="Enter your company name">
     </div>
     <div class="form-group">
-      <label for="vat">name</label>
-      <input type="text" [(ngModel)]="biblestudy.name" class="form-control" id="name" placeholder="">
+      <label for="vat">Bs Name</label>
+      <input type="text" [(ngModel)]="biblestudy.bs_name" name="aim" class="form-control" id="name" placeholder="">
     </div>
     <div class="form-group">
-        <label for="ccmonth">term</label>
-        <select ([ngModel])="biblestudy.term" class="form-control" id="term">
+        <label for="ccmonth">Term</label>
+        <select ([ngModel])="biblestudy.term" name="term" class="form-control" id="term">
           <option value="1">1st</option>
           <option value="2">2nd</option>
-         
+
         </select>
     </div>
     <div class="form-group">
         <label for="ccmonth">Year</label>
-        <select ([ngModel])="biblestudy.year" class="form-control" id="year">
+        <select ([ngModel])="biblestudy.year_id" name="year" class="form-control" id="year">
           <option value="2011">2011</option>
           <option value="2012">2012</option>
-         
+
         </select>
     </div>
     <div class="form-group">
         <label for="ccmonth">category</label>
-        <select ([ngModel])="biblestudy.category_id" class="form-control" id="category">
+        <select ([ngModel])="biblestudy.category_id" name="category" class="form-control" id="category">
           <option value="1">old testament</option>
           <option value="2">New testament</option>
-         
+
         </select>
     </div>
     <div class="row">
       <div class="form-group col-sm-8">
         <label for="city">remark</label>
-        <input ([ngModel])="biblestudy.remark" type="text" class="form-control" id="remark" placeholder="Enter remark">
+        <input ([ngModel])="biblestudy.remark" name="remark" type="text" class="form-control" id="remark" placeholder="Enter remark">
       </div>
       <div class="form-group">
           <label for="city">aim</label>
-          <input ([ngModel])="biblestudy.aim" type="text" class="form-control" id="aim" placeholder="">
+          <input ([ngModel])="biblestudy.aim" name="aim" type="text" class="form-control" id="aim" placeholder="">
         </div>
       <div class="form-group">
           <label for="city">question</label>
-          <input ([ngModel])="biblestudy.question" type="text" class="form-control" id="question" placeholder="Enter Questions">
+          <input ([ngModel])="biblestudy.question" name="question" type="text" class="form-control" id="question" placeholder="Enter Questions">
         </div>
         <div class="form-group">
             <label for="city">tag</label>
-            <input ([ngModel])="biblestudy.tag" type="text" class="form-control" id="tag" placeholder="">
+            <input ([ngModel])="biblestudy.tags" name="tags" type="text" class="form-control" id="tag" placeholder="">
           </div>
           <div class="form-group">
               <label for="city">further_info</label>
-              <input ([ngModel])="biblestudy.further_info" type="text" class="form-control" id="further" placeholder="">
+              <input ([ngModel])="biblestudy.further_info" name="furthers_info" type="text" class="form-control" id="further" placeholder="">
             </div>
       <div class="form-group col-sm-4">
         <label for="postal-code">Verse</label>
         <input ([ngModel])="biblestudy.verse" type="text" class="form-control" id="verse" placeholder="Gen 1:1-3">
       </div>
     </div><!--/.row-->
-   
+
   </div>
   <div class="card-footer">
     <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
