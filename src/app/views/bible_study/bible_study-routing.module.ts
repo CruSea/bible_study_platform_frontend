@@ -3,6 +3,7 @@ import { Routes,
      RouterModule } from '@angular/router';
 
 import { BibleStudyComponent } from './bible-study.component';
+import { AddbsComponent } from 'app/views/bible_study/addbs.component';
 
 const routes: Routes = [
   {
@@ -10,6 +11,13 @@ const routes: Routes = [
     component: BibleStudyComponent,
     data: {
       title: 'BibleStudy'
+    }
+  },
+  {
+    path: 'add',
+    component: AddbsComponent,
+    data: {
+      title: 'create bible study'
     }
   }
 ];

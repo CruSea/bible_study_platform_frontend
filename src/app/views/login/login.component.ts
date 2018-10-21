@@ -17,34 +17,15 @@ export class LoginComponent implements OnInit {
   }
 
   onSignin(form: NgForm){
-    this.authService.authenticate(form.value.email, form.value.password);
+    console.log(form);
+    this.authService.authenticate(form.value.phone, form.value.password);
     this.authService.autheticate_emiter.subscribe( res => {
-      this.isauthenticated = res;
-      if(this.isauthenticated){
-        this.router.navigate(['/dashboard']);
-      
-        swal({
-          position: 'top-end',
-          type: 'success',
-          title: 'Your are loggged in as: ADMIN',
-          showConfirmButton: false,
-          timer: 1500
-        })
-      }else{
-        this.isauthenticated = false;
-        swal({
-          position: 'top-end',
-          type: 'error',
-          title: 'Your are loggged in as: ADMIN',
-          showConfirmButton: false,
-          timer: 1500
-        })
-
-      }
+    
+      console.log(form)
 
     } );
-    
-    // console.log('nic');
 
+  this.router.navigate(['/dashboard']);
+    
   }
 }

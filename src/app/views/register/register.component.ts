@@ -15,8 +15,8 @@ export class RegisterComponent implements OnInit {
   ngOnInit() {
   }
   onRegister(form: NgForm){
-    this.authService.register(form.value.name, form.value.email, form.value.password)
-   console.log("registered", form.value.name, form.value.email, form.value.password)
+    this.authService.register(form.value.full_name, form.value.email, form.value.phone, form.value.password)
+   console.log("registered", form.value.full_name, form.value.email, form.value.password)
    swal({
     position: 'top-end',
     type: 'success',

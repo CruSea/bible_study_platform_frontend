@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { LocationStrategy, HashLocationStrategy } from '@angular/common';
-
+import {FormsModule} from '@angular/forms';
 import { AppComponent } from './app.component';
 
 // Import containers
@@ -75,6 +75,7 @@ import { SmsLogsComponent } from './views/sms-logs/sms-logs.component';
     AppRoutingModule,
     BsDropdownModule.forRoot(),
     TabsModule.forRoot(),
+    FormsModule,
     ChartsModule,
     LoginModule,
     RegisterModule,

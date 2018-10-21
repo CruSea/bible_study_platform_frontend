@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BibleStudyService } from './bible_study.service';
 
 @Component({
  
@@ -6,9 +7,19 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BibleStudyComponent implements OnInit {
 
-  constructor() { }
+  constructor(private biblestudyservice: BibleStudyService) { }
 
   ngOnInit() {
-  }
+    this.biblestudyservice.getBibleStudies().subscribe( res => {
+    
+     console.log(res);
 
-}
+    } );
+  }
+  
+  public GetBiblestudies() {
+    this.biblestudyservice.getBibleStudies();
+    
+    
+
+}}

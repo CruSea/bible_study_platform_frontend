@@ -13,13 +13,14 @@ import {Observable} from "rxjs/observable";
   
   constructor(private http: HttpService, private authservice: AuthService) { }
 
-  public getcategories() {
-    const token = this.authservice.getUserToken();
-    return this.http.sendGetRequest('category' + '?token=' + token);
+  public getCategory() {
+      
+    // const token = this.authservice.getUserToken();
+    // return this.http.sendGetRequest('category/'  + '?token=' + token);
   }
   
-  public getcategoryview(id) {
-    const token = this.authservice.getUserToken();
-    return this.http.sendGetRequest('category/'+ id + '?token=' + token);
+  public getcategoryview(id: number) {
+    // const token = this.authservice.getUserToken();
+    // return this.http.sendGetRequest('category/'+ id + '?token=' + token);
   }
 }

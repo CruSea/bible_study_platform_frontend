@@ -6,14 +6,13 @@ import {SmsLogsComponent} from './sms-logs.component';
 
 const routes: Routes = [
   {
-    path: 'sms-logs',
+    path: '',
     component: SmsLogsComponent,
     data: {
       title: 'sms Logs'
     }
   }
-
-
+  
 ];
 
 @NgModule({

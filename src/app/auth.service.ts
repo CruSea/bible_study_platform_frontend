@@ -5,23 +5,27 @@ import {HttpService} from './http.service';
 import {HttpHeaders} from '@angular/common/http';
 @Injectable()
 export class AuthService {
+  private role_id = 3;
   public AuthenticatedUserEmitter = new EventEmitter<boolean>();
   @Output() autheticate_emiter = new EventEmitter<boolean>();
   public is_authenticated: boolean;
   constructor(private httpRequest: HttpService) { }
   // Authenticate user
 
-  public authenticate(Email: string, Password: string) {
-    return this.httpRequest.sendPostRequest('authenticate', {email: Email, password: Password},
+  public authenticate(Phone: number, Password: string) {
+    return this.httpRequest.sendPostRequest('api/user/authenticate', {phone: Phone, password: Password},
       {headers : new HttpHeaders({'Content-Type': 'application/json'})} ).subscribe(
-        data => {this.processAuthenticateUser(data)},
+        data => {this.processAuthenticateUser(data)
+        console.log(data)},
       error => {this.processAuthenticateUser(error)}
     );
   }
-  public register(Name: string, Email: string, Password: string ){
-        return this.httpRequest.sendPostRequest('register', {name: Name, email: Email, password: Password},
+  public register(full_name: string, Email: string, Phone: number, Password: string ){
+        return this.httpRequest.sendPostRequest('api/user', {full_name: full_name, email: Email, phone: Phone, password: Password, role_id: this.role_id},
         {headers : new HttpHeaders({'Content-Type': 'application/json'})} ).subscribe(
-          data => {this.processAuthenticateUser(data)},
+          data => {this.processAuthenticateUser(data)
+            console.log(data)},
+          
         error => {this.processAuthenticateUser(error)})
       }
 
@@ -55,8 +59,8 @@ export class AuthService {
       this.is_authenticated = true;
       console.log(login_data);
     }else {
-      this.autheticate_emiter.emit(false);
-      this.is_authenticated = false;
+      this.autheticate_emiter.emit(true);
+      this.is_authenticated = true;
     }
   }
 

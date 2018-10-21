@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { CategoryService } from 'app/views/category/category.service';
 
 @Component({
   
@@ -6,9 +7,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class CategoryComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    // private categoryservice: CategoryService
+  ) { }
 
   ngOnInit() {
+
+    // this.categoryservice.getCategory().subscribe(
+    //   data => {
+          
+         
+    //     });
   }
+
 
 }
